@@ -45,4 +45,12 @@ class WiseSayingRepositoryTest {
         assertThat(wiseSayings.get(0).getContent()).isEqualTo("명언 1");
         assertThat(wiseSayings.get(0).getAuthor()).isEqualTo("작가 1");
     }
+
+    @Test
+    @DisplayName("qCount")
+    void t3() {
+        long count = wiseSayingRepository.qCount();
+
+        assertThat(count).isEqualTo(5L);
+    }
 }

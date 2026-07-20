@@ -45,7 +45,10 @@ public class WiseSayingService {
         wiseSayingRepository.delete(wiseSaying);
     }
 
+//    public long count() {
+//        return wiseSayingRepository.count();
+//    }
     public long count() {
-        return wiseSayingRepository.count();
+        return wiseSayingRepository.qCount();
     }
 }

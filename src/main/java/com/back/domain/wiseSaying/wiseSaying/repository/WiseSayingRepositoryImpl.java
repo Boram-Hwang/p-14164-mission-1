@@ -32,4 +32,14 @@ public class WiseSayingRepositoryImpl implements WiseSayingRepositoryCustom {
                 .selectFrom(wiseSaying)
                 .fetch();
     }
+
+    @Override
+    public long qCount() {
+        QWiseSaying wiseSaying = QWiseSaying.wiseSaying;
+
+        return queryFactory
+                .select(wiseSaying.count())
+                .from(wiseSaying)
+                .fetchOne();
+    }
 }
