@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "4.0.6"
+    id("org.springframework.boot") version "4.1.0"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -34,6 +34,9 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testAnnotationProcessor("org.projectlombok:lombok")
     implementation("org.commonmark:commonmark:0.28.0")
+
+    implementation("io.github.openfeign.querydsl:querydsl-jpa:7.4.0")
+    annotationProcessor("io.github.openfeign.querydsl:querydsl-apt:7.4.0:jpa")
 }
 
 tasks.withType<Test> {
