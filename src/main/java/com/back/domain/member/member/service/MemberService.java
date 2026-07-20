@@ -25,7 +25,11 @@ public class MemberService {
         );
     }
 
+//    public Optional<Member> findByUsername(String username) {
+//        return memberRepository.findByUsername(username);
+//    }
+
     public Optional<Member> findByUsername(String username) {
-        return memberRepository.findByUsername(username);
+        return memberRepository.findQByUsername(username);
     }
 }
