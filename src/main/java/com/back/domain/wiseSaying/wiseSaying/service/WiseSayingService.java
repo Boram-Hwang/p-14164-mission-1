@@ -13,8 +13,11 @@ import java.util.Optional;
 public class WiseSayingService {
     private final WiseSayingRepository wiseSayingRepository;
 
+//    public Optional<WiseSaying> findById(int id) {
+//        return wiseSayingRepository.findById(id);
+//    }
     public Optional<WiseSaying> findById(int id) {
-        return wiseSayingRepository.findById(id);
+        return wiseSayingRepository.findQById(id);
     }
 
     public WiseSaying write(String content, String author) {
@@ -25,8 +28,11 @@ public class WiseSayingService {
         return wiseSaying;
     }
 
+//    public List<WiseSaying> findAll() {
+//        return wiseSayingRepository.findAll();
+//    }
     public List<WiseSaying> findAll() {
-        return wiseSayingRepository.findAll();
+        return wiseSayingRepository.findQAll();
     }
 
     public void modify(WiseSaying wiseSaying, String content, String author) {
